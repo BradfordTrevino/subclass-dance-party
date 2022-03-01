@@ -20,10 +20,7 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
-    console.log(window[dancerMakerFunctionName]);
-
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(dancerMakerFunction);
 
     // make a dancer with a random position
 
@@ -32,6 +29,8 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    console.log(dancer);
+    // $(dancer.$node).append(dancer.$img);
     $('body').append(dancer.$node);
   });
 });

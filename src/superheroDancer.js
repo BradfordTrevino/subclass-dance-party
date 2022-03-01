@@ -22,6 +22,9 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
 var SuperheroDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('superheroDancer');
+  this.$img = $('<img class="superheroDancer" src="src/img/superheroDancer.png"></img>');
+  this.$node.append(this.$img);
 };
 
 SuperheroDancer.prototype = Object.create(Dancer.prototype);
@@ -32,7 +35,10 @@ SuperheroDancer.prototype.oldStep = Dancer.prototype.step;
 
 SuperheroDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.toggle();
+  this.$node.animate({
+    width: '250px',
+    height: '250px'
+  }, 'linear');
 };
 
 
