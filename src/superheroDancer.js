@@ -35,10 +35,7 @@ SuperheroDancer.prototype.oldStep = Dancer.prototype.step;
 
 SuperheroDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.animate({
-    width: '250px',
-    height: '250px'
-  }, 'linear');
+  this.$node.fadeToggle(2000, 'swing');
 };
 
 

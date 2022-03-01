@@ -23,10 +23,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('blinkyDancer');
-  this.$img = $('<img class="blinkyDancer" src="src/img/superheroDancer.png"></img>');
-  // this.$img.appendTo(this.$node);
-
-  // this.$node.append('<img class="blinkyDancer" src="src/img/superheroDancer.png"></img>');
+  this.$img = $('<img class="blinkyDancer" src="src/img/blinkyDancer.png"></img>');
+  this.$node.append(this.$img);
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);

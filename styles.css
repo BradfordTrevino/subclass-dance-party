@@ -26,20 +26,26 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .blinkyDancer{
-  border:10px solid blue;
-  border-radius:10px;
+  /* border:10px solid blue;
+  border-radius:10px; */
   position:absolute;
+  max-width: 200px;
 }
 .superheroDancer{
   /* border:10px solid green;
   border-radius:10px; */
   position:absolute;
-}
-.bouncyDancer{
-  border:10px solid purple;
-  border-radius:10px;
-  position:absolute;
-}
-img{
+  /* transform: rotate(35deg); */
   max-width: 200px;
 }
+.bouncyDancer{
+  /* border:10px solid purple;
+  border-radius:10px; */
+  position:absolute;
+  animation-name: bounce 5s linear;
+  max-width: 200px;
+}
+.background{
+  width: 100%;
+  height: 100%
+};

@@ -23,6 +23,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 var BouncyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('bouncyDancer');
+  this.$img = $('<img class="bouncyDancer" src="src/img/bouncyDancer.png"></img>');
+  this.$node.append(this.$img);
 };
 
 BouncyDancer.prototype = Object.create(Dancer.prototype);
@@ -33,7 +35,11 @@ BouncyDancer.prototype.oldStep = Dancer.prototype.step;
 
 BouncyDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.toggle();
+  // this.$node.animate({
+  //   bottom: 'toggle'
+  // }, 2000);
+  this.$node.animate({top: '+=800px'}, 1000, 'swing');
+  this.$node.animate({top: '-=800px'}, 1000, 'swing');
 };
 
 
