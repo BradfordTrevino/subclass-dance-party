@@ -35,9 +35,6 @@ BouncyDancer.prototype.oldStep = Dancer.prototype.step;
 
 BouncyDancer.prototype.step = function() {
   this.oldStep();
-  // this.$node.animate({
-  //   bottom: 'toggle'
-  // }, 2000);
   this.$node.animate({top: '+=800px'}, 1000, 'swing');
   this.$node.animate({top: '-=800px'}, 1000, 'swing');
 };

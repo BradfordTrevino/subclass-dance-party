@@ -29,6 +29,20 @@ $(document).ready(function() {
     );
 
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+  });
+
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      console.log(window.dancers[i]);
+      window.dancers[i].lineUp();
+    }
+  });
+
+  $('body').on('mouseover', '.superheroDancer', function() {
+    console.log($(this));
+    $(this).animate({width: '-=200px'}, 1000, 'swing');
+    $(this).animate({width: '+=200px'}, 1000, 'swing');
   });
 });
 
